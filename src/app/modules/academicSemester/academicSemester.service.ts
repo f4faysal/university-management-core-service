@@ -1,4 +1,5 @@
 import { AcademicSemester, PrismaClient } from "@prisma/client";
+import { IGenericResponse } from "../../../interfaces/common";
 
 
 
@@ -10,6 +11,21 @@ const insertIntoDB = async (academicSemesterData: AcademicSemester): Promise<Aca
      });
      return result;
 }
+const getAllFormDB = async (): Promise<IGenericResponse<AcademicSemester[]>> => {
+     const result = await prisma.academicSemester.findMany();
+
+
+     const total = await prisma.academicSemester.count();
+     return {
+          meta: {
+               total,
+               page: 1,
+               limit: 10
+          },
+          data: result
+     }
+}
 export const academicSemesterService = {
-     insertIntoDB
+     insertIntoDB,
+     getAllFormDB
 }
