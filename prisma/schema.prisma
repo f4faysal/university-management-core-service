@@ -31,7 +31,7 @@ model AcademicFaculty {
   updatedAt           DateTime             @updatedAt
   academicDepartments AcademicDepartment[]
   students            Student[]
-  facultys            Faculty[]
+  faculties           Faculty[]
 
   @@map("academic_faculty")
 }
@@ -45,7 +45,7 @@ model AcademicDepartment {
   academicFaculty   AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
   academicFacultyId String
   students          Student[]
-  facultys          Faculty[]
+  faculties         Faculty[]
 
   @@map("academic_departments")
 }
@@ -53,7 +53,7 @@ model AcademicDepartment {
 model Student {
   id           String   @id @default(uuid())
   studentId    String
-  fristName    String
+  firstName    String
   lastName     String
   middleName   String
   profileImage String
@@ -67,11 +67,11 @@ model Student {
   academicSemester   AcademicSemester @relation(fields: [academicSemesterId], references: [id])
   academicSemesterId String
 
-  academicFaculty   AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
-  academicFacultyId String
-
   academicDepartment   AcademicDepartment @relation(fields: [academicDepartmentId], references: [id])
   academicDepartmentId String
+
+  academicFaculty   AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
+  academicFacultyId String
 
   @@map("students")
 }
@@ -79,7 +79,7 @@ model Student {
 model Faculty {
   id           String   @id @default(uuid())
   facultyId    String
-  fristName    String
+  firstName    String
   lastName     String
   middleName   String
   profileImage String
@@ -91,10 +91,11 @@ model Faculty {
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
-  academicFaculty      AcademicFaculty    @relation(fields: [academicFacultyId], references: [id])
-  academicFacultyId    String
   academicDepartment   AcademicDepartment @relation(fields: [academicDepartmentId], references: [id])
   academicDepartmentId String
+
+  academicFaculty   AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
+  academicFacultyId String
 
   @@map("faculties")
 }

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\errors\\.61d728714c6a28354c542b665ae82b570eb4f188-audit.json",
+    "files": [
+        {
+            "date": 1692728479861,
+            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\errors\\phu-2023-23-08-00-error.log",
+            "hash": "2671a98a3dd1d9573e40a78d2ecdb0c16bbe6713341de79c04272decf08cfaa5"
+        }
+    ],
+    "hashType": "sha256"
+}
