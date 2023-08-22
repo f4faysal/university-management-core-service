@@ -28,7 +28,44 @@ const getAllFormDB = catchAsync(async (req: Request, res: Response) => {
      })
 })
 
+const getDataById = catchAsync(async (req: Request, res: Response) => {
+     const result = await academicSemesterService.getDataById(req.params.id);
+     sendResponse(res, {
+          statusCode: httpStatus.OK,
+          success: true,
+          message: "Academic Semster data fetched!!",
+          data: result
+     })
+})
+
+
+const updateOneInDB = catchAsync(async (req: Request, res: Response) => {
+     const { id } = req.params;
+     const result = await academicSemesterService.updateOneInDB(id, req.body);
+     sendResponse(res, {
+          statusCode: httpStatus.OK,
+          success: true,
+          message: 'Academic Semster updated successfully',
+          data: result
+     });
+});
+
+const deleteByIdFromDB = catchAsync(async (req: Request, res: Response) => {
+     const { id } = req.params;
+     const result = await academicSemesterService.deleteByIdFromDB(id);
+     sendResponse(res, {
+          statusCode: httpStatus.OK,
+          success: true,
+          message: 'Academic Semster delete successfully',
+          data: result
+     });
+});
+
+
 export const academicSemesterController = {
      insertIntoDB,
-     getAllFormDB
+     getAllFormDB,
+     getDataById,
+     updateOneInDB,
+     deleteByIdFromDB
 }

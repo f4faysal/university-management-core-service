@@ -6,8 +6,18 @@ import { academicSemesterValidation } from "./academicSemeter.validation";
 const router = express.Router();
 
 
+router.get("/", academicSemesterController.getAllFormDB);
+router.get('/:id', academicSemesterController.getDataById)
 router.post("/", validateRequest(academicSemesterValidation.create), academicSemesterController.insertIntoDB);
 
-router.get("/", academicSemesterController.getAllFormDB);
+router.patch(
+     '/:id',
+     validateRequest(academicSemesterValidation.update),
+     academicSemesterController.updateOneInDB
+);
 
+router.delete(
+     '/:id',
+     academicSemesterController.deleteByIdFromDB
+);
 export const academicSemesterRoutes = router;
