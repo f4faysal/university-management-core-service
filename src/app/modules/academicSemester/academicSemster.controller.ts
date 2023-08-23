@@ -68,7 +68,7 @@ const deleteByIdFromDB = catchAsync(async (req: Request, res: Response) => {
      });
 });
 
-
+// AcademicSemester
 export const AcademicSemesterController = {
      insertIntoDB,
      getAllFormDB,
