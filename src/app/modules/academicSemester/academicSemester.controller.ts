@@ -3,11 +3,12 @@ import { Request, Response } from "express";
 import httpStatus from "http-status";
 import { IGenericResponse } from "../../../interfaces/common";
 import catchAsync from "../../../shared/catchAsync";
+import pick from "../../../shared/pick";
 import sendResponse from "../../../shared/sendResponse";
-import { academicSemesterService } from "./academicSemester.service";
+import { AcademicSemesterService } from "./academicSemester.service";
 
 const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
-     const result = await academicSemesterService.insertIntoDB(req.body);
+     const result = await AcademicSemesterService.insertIntoDB(req.body);
 
      sendResponse<AcademicSemester>(res, {
           statusCode: httpStatus.OK,
@@ -18,7 +19,13 @@ const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
 })
 
 const getAllFormDB = catchAsync(async (req: Request, res: Response) => {
-     const result = await academicSemesterService.getAllFormDB();
+
+     const filters = pick(req.query, ["title", "startMonth", "searchTerm"])
+     const options = pick(req.query, ["sortBy", "sortOder", "limit", "page"])
+
+     // console.log(filters, options)
+
+     const result = await AcademicSemesterService.getAllFormDB(filters, options);
 
      sendResponse<IGenericResponse<AcademicSemester[]>>(res, {
           statusCode: httpStatus.OK,
@@ -29,7 +36,7 @@ const getAllFormDB = catchAsync(async (req: Request, res: Response) => {
 })
 
 const getDataById = catchAsync(async (req: Request, res: Response) => {
-     const result = await academicSemesterService.getDataById(req.params.id);
+     const result = await AcademicSemesterService.getDataById(req.params.id);
      sendResponse(res, {
           statusCode: httpStatus.OK,
           success: true,
@@ -41,7 +48,7 @@ const getDataById = catchAsync(async (req: Request, res: Response) => {
 
 const updateOneInDB = catchAsync(async (req: Request, res: Response) => {
      const { id } = req.params;
-     const result = await academicSemesterService.updateOneInDB(id, req.body);
+     const result = await AcademicSemesterService.updateOneInDB(id, req.body);
      sendResponse(res, {
           statusCode: httpStatus.OK,
           success: true,
@@ -52,7 +59,7 @@ const updateOneInDB = catchAsync(async (req: Request, res: Response) => {
 
 const deleteByIdFromDB = catchAsync(async (req: Request, res: Response) => {
      const { id } = req.params;
-     const result = await academicSemesterService.deleteByIdFromDB(id);
+     const result = await AcademicSemesterService.deleteByIdFromDB(id);
      sendResponse(res, {
           statusCode: httpStatus.OK,
           success: true,
@@ -62,7 +69,7 @@ const deleteByIdFromDB = catchAsync(async (req: Request, res: Response) => {
 });
 
 
-export const academicSemesterController = {
+export const AcademicSemesterController = {
      insertIntoDB,
      getAllFormDB,
      getDataById,
