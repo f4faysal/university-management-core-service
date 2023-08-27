@@ -1,9 +1,19 @@
-
 import express from 'express';
+import validateRequest from '../../middlewares/validateRequest';
 import { AcademicDepartmentController } from './academicDepartment.controller';
+import { AcademicDepartmentValidation } from './academicDepartment.validation';
+
 
 const router = express.Router();
 
-router.post('/', AcademicDepartmentController.insertIntoDB);
+router.get('/', AcademicDepartmentController.getAllFromDB);
+router.get('/:id', AcademicDepartmentController.getByIdFromDB);
 
-export const AcademicDepartmentRouter = router;
+router.post(
+     '/',
+     validateRequest(AcademicDepartmentValidation.create),
+     AcademicDepartmentController.insertIntoDB
+);
+
+
+export const academicDepartmentRoutes = router;
