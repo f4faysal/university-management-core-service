@@ -29,4 +29,4 @@ router.delete(
 
      StudentController.deleteFromDB);
 
-export const studentRoutes = router;
+export const StudentRoutes = router;

@@ -16,4 +16,4 @@ router.post(
 );
 
 
-export const academicDepartmentRoutes = router;
+export const AcademicDepartmentRoutes = router;
