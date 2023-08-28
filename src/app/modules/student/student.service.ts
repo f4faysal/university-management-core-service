@@ -7,8 +7,8 @@ import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import prisma from '../../../shared/prisma';
 // import { studentRelationalFields, studentRelationalFieldsMapper, studentSearchableFields } from './student.constants';
-import { studentRelationalFields, studentRelationalFieldsMapper, studentSearchableFields } from './student.contants';
 import { IStudentFilterRequest } from './student.interface';
+import { studentRelationalFields, studentRelationalFieldsMapper, studentSearchableFields } from './student.contants';
 
 const insertIntoDB = async (data: Student): Promise<Student> => {
      const result = await prisma.student.create({
