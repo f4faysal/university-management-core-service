@@ -64,6 +64,21 @@
             "date": 1693317624874,
             "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-29-08-20-success.log",
             "hash": "4a6d315ad04ad5d5f81a73b80d5d951778778d7845c49577c6852383486a1c2a"
+        },
+        {
+            "date": 1693325004038,
+            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-29-08-22-success.log",
+            "hash": "9b8358d3fbee38af9f38f68eb5c568781f4cf293fdf2b2d10f251a866b507514"
+        },
+        {
+            "date": 1693333700590,
+            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-30-08-00-success.log",
+            "hash": "561a1794da32f34d95734e3cc8e9cacf85fa69e7899551d22fc4b0f60cf4cb40"
+        },
+        {
+            "date": 1693335613368,
+            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-30-08-01-success.log",
+            "hash": "5a2f3f18bcc7876bf77821580fb69bea00cd3a55a328ec6a52761157f94b65a2"
         }
     ],
     "hashType": "sha256"
