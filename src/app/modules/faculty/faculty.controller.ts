@@ -1,33 +1,21 @@
-import { Request, Response } from "express";
-import httpStatus from "http-status";
-import catchAsync from "../../../shared/catchAsync";
-import pick from "../../../shared/pick";
-import sendResponse from "../../../shared/sendResponse";
-import { facultyFilterableFields } from "./faculty.contants";
-import { FacultyService } from "./faculty.service";
-
+import { Request, Response } from 'express';
+import httpStatus from 'http-status';
+import catchAsync from '../../../shared/catchAsync';
+import pick from '../../../shared/pick';
+import sendResponse from '../../../shared/sendResponse';
+import { FacultyService } from './faculty.service';
+import { facultyFilterableFields } from './faculty.contants';
 
 const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
      const result = await FacultyService.insertIntoDB(req.body);
-
      sendResponse(res, {
           statusCode: httpStatus.OK,
           success: true,
-          message: "Faculty added successfully",
+          message: 'Faculty created successfully',
           data: result
-     })
+     });
 })
 
-const getByIdFromDB = catchAsync(async (req: Request, res: Response) => {
-     const result = await FacultyService.getByIdFromDB(req.params.id);
-
-     sendResponse(res, {
-          statusCode: httpStatus.OK,
-          success: true,
-          message: "Faculty fetched successfully",
-          data: result
-     })
-})
 const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
      const filters = pick(req.query, facultyFilterableFields);
      const options = pick(req.query, ['limit', 'page', 'sortBy', 'sortOrder']);
@@ -41,34 +29,70 @@ const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
      });
 })
 
-const deteteByIdFromDB = catchAsync(async (req: Request, res: Response) => {
-     const result = await FacultyService.deteteByIdFromDB(req.params.id);
-
+const getByIdFromDB = catchAsync(async (req: Request, res: Response) => {
+     const { id } = req.params;
+     const result = await FacultyService.getByIdFromDB(id);
      sendResponse(res, {
           statusCode: httpStatus.OK,
           success: true,
-          message: "Faculty deleted successfully",
+          message: 'Faculty fetched successfully',
           data: result
-     })
-})
+     });
+});
 
 const updateOneInDB = catchAsync(async (req: Request, res: Response) => {
      const { id } = req.params;
      const result = await FacultyService.updateOneInDB(id, req.body);
-
      sendResponse(res, {
           statusCode: httpStatus.OK,
           success: true,
-          message: "Faculty updated successfully",
+          message: 'Faculty updated successfully',
           data: result
-     })
+     });
+});
+
+const deleteByIdFromDB = catchAsync(async (req: Request, res: Response) => {
+     const { id } = req.params;
+     const result = await FacultyService.deleteByIdFromDB(id);
+     sendResponse(res, {
+          statusCode: httpStatus.OK,
+          success: true,
+          message: 'Faculty delete successfully',
+          data: result
+     });
+});
+
+const assignCourses = catchAsync(async (req: Request, res: Response) => {
+     const { id } = req.params;
+     console.log(req.body.faculties)
+     const result = await FacultyService.assignCourses(id, req.body.courses);
+     sendResponse(res, {
+          statusCode: httpStatus.OK,
+          success: true,
+          message: 'Course faculty assigned successfully',
+          data: result
+     });
+})
+
+const removeCourses = catchAsync(async (req: Request, res: Response) => {
+     const { id } = req.params;
+     console.log(req.body.faculties)
+     const result = await FacultyService.removeCourses(id, req.body.courses);
+     sendResponse(res, {
+          statusCode: httpStatus.OK,
+          success: true,
+          message: 'Course faculty deleted successfully',
+          data: result
+     });
 })
 
 
 export const FacultyController = {
      insertIntoDB,
-     getByIdFromDB,
      getAllFromDB,
-     deteteByIdFromDB,
-     updateOneInDB
-}
+     getByIdFromDB,
+     updateOneInDB,
+     deleteByIdFromDB,
+     assignCourses,
+     removeCourses
+};

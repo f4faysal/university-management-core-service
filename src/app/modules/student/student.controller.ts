@@ -3,7 +3,6 @@ import httpStatus from 'http-status';
 import catchAsync from '../../../shared/catchAsync';
 import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
-// import { studentFilterableFields } from './student.constants';
 import { studentFilterableFields } from './student.contants';
 import { StudentService } from './student.service';
 
