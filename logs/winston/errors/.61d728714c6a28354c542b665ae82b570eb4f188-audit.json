@@ -59,6 +59,11 @@
             "date": 1693316755592,
             "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\errors\\phu-2023-29-08-19-error.log",
             "hash": "5165f0e4b4f0bd84e1c14d544780e6bb3850d7e4737920ac1c77191b754d6d50"
+        },
+        {
+            "date": 1693317624897,
+            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\errors\\phu-2023-29-08-20-error.log",
+            "hash": "860d6dd61eb64ca306ec5fa42d0e2eb60e85ec79545956c6268ee927754cbc8e"
         }
     ],
     "hashType": "sha256"
