@@ -79,6 +79,11 @@
             "date": 1693335613368,
             "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-30-08-01-success.log",
             "hash": "5a2f3f18bcc7876bf77821580fb69bea00cd3a55a328ec6a52761157f94b65a2"
+        },
+        {
+            "date": 1693383033639,
+            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-30-08-14-success.log",
+            "hash": "3c112b6e9724befd1fe4650ac847d36e2983ac815bef451b3abd3aae438f64c5"
         }
     ],
     "hashType": "sha256"
