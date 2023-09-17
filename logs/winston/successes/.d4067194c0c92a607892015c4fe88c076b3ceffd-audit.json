@@ -6,84 +6,9 @@
     "auditLog": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\.d4067194c0c92a607892015c4fe88c076b3ceffd-audit.json",
     "files": [
         {
-            "date": 1692728479851,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-23-08-00-success.log",
-            "hash": "c43cc15966a50f97df53aac6addcc90ea947834bb02d864a60cf08accc8a9c60"
-        },
-        {
-            "date": 1692731595739,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-23-08-01-success.log",
-            "hash": "fbeaac000feee2f070a533a5da1e59cc38a20b58c409ab8c23b91408ee7095fa"
-        },
-        {
-            "date": 1692771730182,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-23-08-12-success.log",
-            "hash": "fcafe7d18baf4e7e74d141cf1764d1804576ea4842b05d96952125b661dca939"
-        },
-        {
-            "date": 1692774416704,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-23-08-13-success.log",
-            "hash": "61447aa0d732597d53a35517bef5ac84a522b95ff4a7cdbdbe9c3cb0309fdb37"
-        },
-        {
-            "date": 1692824999243,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-24-08-03-success.log",
-            "hash": "66c55b05b549a54dd56e6c5e9e014962b5d128ec54ac3a3193ca224307017086"
-        },
-        {
-            "date": 1692828159957,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-24-08-04-success.log",
-            "hash": "b27b17721d77be90b10ff3c93957acb2d97fb47e010a2d96d44fddffa3deb60e"
-        },
-        {
-            "date": 1693164360955,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-28-08-01-success.log",
-            "hash": "50b31a76df43c1967715b9fff7842ed0b1060d72c37bef219a1e1abe2971ae29"
-        },
-        {
-            "date": 1693166405949,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-28-08-02-success.log",
-            "hash": "3414858c274d15f229f87e5ac3c1e9d8c98e752d676ac6daa796f5bd1d6ffcdc"
-        },
-        {
-            "date": 1693208180569,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-28-08-13-success.log",
-            "hash": "a1f2994a3b8b2cca7bf8565e8d82f397017d4a9c7a13292de28a003cb4cbc8fc"
-        },
-        {
-            "date": 1693228281009,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-28-08-19-success.log",
-            "hash": "6184189aa2ef4f8c8682a914be1e0fe5cce2f9b421278c346c65a7af9685ea42"
-        },
-        {
-            "date": 1693316755584,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-29-08-19-success.log",
-            "hash": "382d8b5ebd0997a0105e5ea670978b8cd4061e7fca3d88ea929da28067ba506d"
-        },
-        {
-            "date": 1693317624874,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-29-08-20-success.log",
-            "hash": "4a6d315ad04ad5d5f81a73b80d5d951778778d7845c49577c6852383486a1c2a"
-        },
-        {
-            "date": 1693325004038,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-29-08-22-success.log",
-            "hash": "9b8358d3fbee38af9f38f68eb5c568781f4cf293fdf2b2d10f251a866b507514"
-        },
-        {
-            "date": 1693333700590,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-30-08-00-success.log",
-            "hash": "561a1794da32f34d95734e3cc8e9cacf85fa69e7899551d22fc4b0f60cf4cb40"
-        },
-        {
-            "date": 1693335613368,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-30-08-01-success.log",
-            "hash": "5a2f3f18bcc7876bf77821580fb69bea00cd3a55a328ec6a52761157f94b65a2"
-        },
-        {
-            "date": 1693383033639,
-            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-30-08-14-success.log",
-            "hash": "3c112b6e9724befd1fe4650ac847d36e2983ac815bef451b3abd3aae438f64c5"
+            "date": 1694975825621,
+            "name": "D:\\Next Lavel\\sf-university\\university-management-core-service\\logs\\winston\\successes\\phu-2023-18-09-00-success.log",
+            "hash": "2bae6634b25a1f674c380728cddad8fb2e32de0d26d984ab4fda057228f599ae"
         }
     ],
     "hashType": "sha256"

@@ -1,5 +1,3 @@
-
-export type IAcamdemicSemesterFilterList = {
-     searchTerm?: string,
-
+export type IAcademicSemeterFilterRequest = {
+    searchTerm?: string
 }
