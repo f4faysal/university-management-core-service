@@ -11,15 +11,17 @@ import { AcademicSemesterSearchAbleFields, EVENT_ACADEMIC_SEMESTER_CREATED, EVEN
 
 
 const insertIntoDB = async (academicSemesterData: AcademicSemester): Promise<AcademicSemester> => {
+
     if (academicSemesterTitleCodeMapper[academicSemesterData.title] !== academicSemesterData.code) {
         throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
     }
+
     const result = await prisma.academicSemester.create({
         data: academicSemesterData
     });
 
     if (result) {
-        await RedisClient.publish(EVENT_ACADEMIC_SEMESTER_CREATED, JSON.stringify(result))
+        await RedisClient.publish(EVENT_ACADEMIC_SEMESTER_CREATED, JSON.stringify(result));
     }
 
     return result;
